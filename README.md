@@ -28,3 +28,9 @@ const userName = readlineSync.question('May I have your name? ');
 console.log(`Hi ${userName}!`);
 
 ```
+# Paso 3: Escribir el codigo del proyecto
+
+# Paso 4: Ejecutar el proyecto
+```bash
+node [nombre-archivo-que-tiene-el-codigo].js
+```
