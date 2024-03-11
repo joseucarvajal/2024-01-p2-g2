@@ -10,8 +10,7 @@ let gastoHijosSecundaria = 0;
 let gastoViajesEmpleadosExtranjeros = 0;
 
 //Pedimos al usuario la cantidad de empleados que tiene la empresa.//
-console.log('');
-const numeroEmpleados = +readlineSync.question('Ingrese  el número de empleados que tiene la empresa: ');
+const numeroEmpleados = +readlineSync.question('\nIngrese  el número de empleados que tiene la empresa: ');
 if(isNaN(numeroEmpleados)){
     console.error('El valor a ingresar debe ser númerico. Intentelo nuevamente.');
 }
@@ -22,8 +21,7 @@ else{
 }
 /*Pedimos los valores de hijos en primaria, hijos en secundaria e hijos en universidad 
 para los subisidios de estudio.*/
-console.log('');
-const subsidioPrimaria = +readlineSync.question('Ingrese el valor de subsidio que desea para los hijos que estudian en primaria: ');
+const subsidioPrimaria = +readlineSync.question('\nIngrese el valor de subsidio que desea para los hijos que estudian en primaria: ');
 if(isNaN(subsidioPrimaria)){
     console.error('El valor a ingresar debe ser numerico. Intene nuevamente.');
 }
@@ -47,8 +45,7 @@ if(isNaN(valorVuelos)){
 //Pedimos información del empleado para saber si el empleado es hombre o mujer.//
 
 for(let i = 1; i <= numeroEmpleados; i++){
-    console.log('');
-    let sueldoEmpleado = +readlineSync.question(`Ingrese el sueldo del empleado ${i}: `);
+    let sueldoEmpleado = +readlineSync.question(`\nIngrese el sueldo del empleado ${i}: `);
     const generoEmpleado = readlineSync.question(`Ingrese el genero del empleado ${i} (f/m): `);
 
     let estratoEmpleado = +readlineSync.question(`Ingrese el estrato social del empleado ${i}: `);
@@ -119,16 +116,13 @@ universidad.*/
         nominaHombres += sueldoTotalEmpleado;
     }
     
-    console.log('');
-    console.log(`El empleado ${i} tiene un bono adicional por extranjeria de: ${subsidioVuelo} por los vuelos de ida y vuelta.`);
+    console.log(`\nEl empleado ${i} tiene un bono adicional por extranjeria de: ${subsidioVuelo} por los vuelos de ida y vuelta.`);
     console.log(`El sueldo del empleado ${i} (con todos los subsidios) es de: $${sueldoTotalEmpleado}`);
-    console.log('');
 
-    nominaTotal +=  numeroEmpleados + sueldoTotalEmpleado;
+    nominaTotal += sueldoTotalEmpleado;
     
 }
-console.log('');
-console.info(`La nomina total de la empresa es de: $${nominaTotal}`);
+console.info(`\nLa nomina total de la empresa es de: $${nominaTotal}`);
 console.info(`La nomina de los empleado hombres es de: $${nominaHombres}`);
 console.info(`La nomina de las empleadas mujeres es de: $${nominaMujeres}`);
 console.info(`El empleado que tiene el sueldo mas alto es el empleado numero ${empleadoMasCaro} con un sueldo total de: $${sueldoEmpleadoMasAlto}`);
